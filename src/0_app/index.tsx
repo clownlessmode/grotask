@@ -2,17 +2,17 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import { BrowserRouter, Route, Routes } from "react-router";
-import { ThemeProvider } from "@app/providers/theme-provider";
 import { Authorization } from "@pages/authorization";
+import Providers from "./providers/providers";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
+    <Providers>
       <BrowserRouter>
         <Routes>
           <Route index path="/" element={<Authorization />} />
         </Routes>
       </BrowserRouter>
-    </ThemeProvider>
+    </Providers>
   </StrictMode>
 );
